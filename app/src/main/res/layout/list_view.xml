@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/shadow_list">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="10dp">
+    <ImageView
+        android:id="@+id/iv_satu"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tv_satu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/iv_satu"
+            android:text="Judul"
+            android:textSize="18dp"
+            />
+    <TextView
+        android:id="@+id/tv_deskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi"
+        android:layout_toRightOf="@id/iv_satu"
+        android:textSize="12dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/tv_satu"
+        android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_total_pay"
+            android:layout_below="@id/tv_deskripsi"
+            android:text="Rp 2.000.000"
+            android:layout_toRightOf="@id/iv_satu"
+            android:textSize="15sp"
+            android:layout_marginLeft="8dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

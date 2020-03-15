@@ -1,0 +1,8 @@
+<resources>
+    <!--    <string name="app_name">SPUS App</string>-->
+
+    <string name="title_home">Home</string>
+    <string name="title_history">History</string>
+    <string name="title_pay">Pay</string>
+    <string name="title_me">Account</string>
+</resources>

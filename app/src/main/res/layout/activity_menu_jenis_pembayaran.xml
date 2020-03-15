@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.spusapp.MenuJenisPembayaranActivity"
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="30dp"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp"
+    android:gravity="center">
+    <Button
+        android:id="@+id/btn_rutin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pembayaran Rutin"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:background="@color/colorLightBlue8"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_rutin"
+        android:text="Sekali Bayar"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:background="@color/colorLightBlue8"/>
+
+
+</RelativeLayout>
