@@ -6,11 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.spusapp.NotificationActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/app_bar">
-
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/main_toolbar"
             style="@style/ThemeOverlay.AppCompat.ActionBar"
@@ -25,10 +20,10 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center">
+                android:layout_height="match_parent">
 
                 <TextView
+                    android:id="@+id/tv_judul"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -39,13 +34,12 @@
             </RelativeLayout>
 
         </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
 
     <ListView
         android:id="@+id/lv_notif"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/app_bar"
+        android:layout_below="@id/main_toolbar"
 
         >
     </ListView>

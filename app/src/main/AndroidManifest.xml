@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:allowBackup">
-        <activity android:name=".TutorialActivity"></activity>
+        <activity android:name=".DaftarActivity"></activity>
+        <activity android:name=".TutorialActivity" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".NotificationActivity" />
         <activity android:name=".MenuJenisPembayaranActivity" />

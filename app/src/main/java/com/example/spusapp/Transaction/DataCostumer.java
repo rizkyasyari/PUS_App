@@ -20,57 +20,57 @@ public class DataCostumer {
         list.add(new Product("https://cdn4.iconfinder.com/data/icons/school-education-24/24/tuition_fee_fee_payday_payment_course_education_studying-512.png",
                 "SPP Bulan Januari",
                 1,
-                200000
+                1200000
         ));
         list.add(new Product("https://cdn4.iconfinder.com/data/icons/school-education-24/24/tuition_fee_fee_payday_payment_course_education_studying-512.png",
                 "SPP Bulan Februari",
                 1,
-                200000
+                1200000
         ));
         list.add(new Product("https://cdn4.iconfinder.com/data/icons/school-education-24/24/tuition_fee_fee_payday_payment_course_education_studying-512.png",
                 "SPP Bulan Maret",
                 1,
-                200000
+                1200000
         ));
         list.add(new Product("https://cdn4.iconfinder.com/data/icons/school-education-24/24/tuition_fee_fee_payday_payment_course_education_studying-512.png",
                 "SPP Bulan April",
                 1,
-                200000
+                1200000
         ));
         list.add(new Product("https://cdn4.iconfinder.com/data/icons/school-education-24/24/tuition_fee_fee_payday_payment_course_education_studying-512.png",
                 "SPP Bulan Mei",
                 1,
-                200000
+                1200000
         ));
         list.add(new Product("https://cdn4.iconfinder.com/data/icons/school-education-24/24/tuition_fee_fee_payday_payment_course_education_studying-512.png",
                 "SPP Bulan Juni",
                 1,
-                200000
+                1200000
         ));
         list.add(new Product("https://cdn4.iconfinder.com/data/icons/school-education-24/24/tuition_fee_fee_payday_payment_course_education_studying-512.png",
                 "SPP Bulan Juli",
                 1,
-                200000
+                1200000
         ));list.add(new Product("https://cdn4.iconfinder.com/data/icons/school-education-24/24/tuition_fee_fee_payday_payment_course_education_studying-512.png",
                 "SPP Bulan Agustus",
                 1,
-                200000
+                1200000
         ));list.add(new Product("https://cdn4.iconfinder.com/data/icons/school-education-24/24/tuition_fee_fee_payday_payment_course_education_studying-512.png",
                 "SPP Bulan September",
                 1,
-                200000
+                1200000
         ));list.add(new Product("https://cdn4.iconfinder.com/data/icons/school-education-24/24/tuition_fee_fee_payday_payment_course_education_studying-512.png",
                 "SPP Bulan Oktober",
                 1,
-                200000
+                1200000
         ));list.add(new Product("https://cdn4.iconfinder.com/data/icons/school-education-24/24/tuition_fee_fee_payday_payment_course_education_studying-512.png",
                 "SPP Bulan November",
                 1,
-                200000
+                1200000
         ));list.add(new Product("https://cdn4.iconfinder.com/data/icons/school-education-24/24/tuition_fee_fee_payday_payment_course_education_studying-512.png",
                 "SPP Bulan Desember",
                 1,
-                200000
+                1200000
         ));
 
         return list;

@@ -17,13 +17,20 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         lanjutkan = (Button) findViewById(R.id.tv_lanjutkan);
-//        daftar = (Button) findViewById(R.id.tv_daftar);
+        daftar = (Button) findViewById(R.id.bt_daftar);
 
         lanjutkan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent login = new Intent(getApplicationContext(),OtpActivity.class);
                 startActivity(login);
+            }
+        });
+        daftar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent daftar = new Intent(getApplicationContext(),DaftarActivity.class);
+                startActivity(daftar);
             }
         });
     }

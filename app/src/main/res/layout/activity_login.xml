@@ -66,6 +66,19 @@
         android:textColor="#fff"
         />
 
+    <Button
+        android:id="@+id/bt_daftar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Daftar Sekolah"
+        android:layout_below="@+id/tv_lanjutkan"
+        android:background="@drawable/button_radius_green"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        />
+
+
 <!--    <Button-->
 <!--        android:id="@+id/tv_daftar"-->
 <!--        android:layout_width="200dp"-->

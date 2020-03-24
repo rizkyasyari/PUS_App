@@ -63,7 +63,7 @@
                 android:fontFamily="sans-serif"
                 android:text="Pembayaran Rutin"
                 android:textColor="#fff"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
             <Button
                 android:id="@+id/btn_sekali"
                 android:layout_width="match_parent"
