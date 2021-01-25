@@ -40,7 +40,7 @@ public class ProductListActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.setHasFixedSize(true);
 
-        AdapterProduct adapterProduct = new AdapterProduct(DataCostumer.getListProduct());
+        AdapterProduct adapterProduct = new AdapterProduct(DataCustumer.getListProduct());
 
         recyclerView.setAdapter(adapterProduct);
     }

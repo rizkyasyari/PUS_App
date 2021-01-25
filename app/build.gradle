@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion 29
@@ -35,6 +37,17 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:26.0.0')
+
+    // Declare the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth:19.4.0'
+
+    implementation 'com.google.firebase:firebase-analytics'
+
+    implementation 'com.google.android.gms:play-services-safetynet:17.0.0'
+
     implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation 'com.midtrans:uikit:1.21.2-SANDBOX'
 
@@ -47,4 +60,16 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
 
     implementation 'com.github.f0ris.sweetalert:library:1.6.2'
+
+    implementation 'androidx.browser:browser:1.2.0'
+
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation("com.squareup.okhttp3:logging-interceptor:4.2.0")
+
+
+
 }

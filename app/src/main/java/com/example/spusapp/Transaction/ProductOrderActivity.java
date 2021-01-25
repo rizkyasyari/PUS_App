@@ -39,7 +39,7 @@ public class ProductOrderActivity extends AppCompatActivity implements Transacti
                 .enableLog(true)
                 .setColorTheme(new CustomColorTheme("#29B6F6", "#B3E5FC", "#0288D1"))
                 .buildSDK();
-
+       
     }
 
     @SuppressLint("SetTextI18n")
@@ -55,10 +55,10 @@ public class ProductOrderActivity extends AppCompatActivity implements Transacti
         ((TextView)findViewById(R.id.product_qty)).setText(String.valueOf(getIntent().getIntExtra("qty",0)));
         ((TextView)findViewById(R.id.product_price_amount)).setText("Rp "+getIntent().getIntExtra("price",0));
 
-        ((EditText)findViewById(R.id.edit_customer_name)).setText(DataCostumer.NAME);
-        ((EditText)findViewById(R.id.edit_customer_email)).setText(DataCostumer.EMAIL);
-        ((EditText)findViewById(R.id.edit_customer_phone)).setText(DataCostumer.PHONE);
-        ((TextView)findViewById(R.id.delivery_address)).setText(DataCostumer.ADDRESS);
+        ((EditText)findViewById(R.id.edit_customer_name)).setText(DataCustumer.NAME);
+        ((EditText)findViewById(R.id.edit_customer_email)).setText(DataCustumer.EMAIL);
+        ((EditText)findViewById(R.id.edit_customer_phone)).setText(DataCustumer.PHONE);
+        ((TextView)findViewById(R.id.delivery_address)).setText(DataCustumer.ADDRESS);
 
         findViewById(R.id.button_primary).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +69,7 @@ public class ProductOrderActivity extends AppCompatActivity implements Transacti
     }
 
     private void actionButton() {
-        MidtransSDK.getInstance().setTransactionRequest(DataCostumer.transactionRequest(
+        MidtransSDK.getInstance().setTransactionRequest(DataCustumer.transactionRequest(
                 "1",
                 getIntent().getIntExtra("price",0),
                 getIntent().getIntExtra("qty",0),
@@ -77,6 +77,7 @@ public class ProductOrderActivity extends AppCompatActivity implements Transacti
                 getIntent().getIntExtra("position",0)
 
         ));
+       
         MidtransSDK.getInstance().startPaymentUiFlow(this);
     }
 

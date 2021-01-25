@@ -1,15 +1,19 @@
 package com.example.spusapp.Transaction;
 
+import android.util.Log;
+
 import com.midtrans.sdk.corekit.core.TransactionRequest;
 import com.midtrans.sdk.corekit.models.BankType;
+import com.midtrans.sdk.corekit.models.BillingAddress;
 import com.midtrans.sdk.corekit.models.CustomerDetails;
 import com.midtrans.sdk.corekit.models.ItemDetails;
+import com.midtrans.sdk.corekit.models.ShippingAddress;
 import com.midtrans.sdk.corekit.models.snap.CreditCard;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataCostumer {
+public class DataCustumer {
     public static String NAME = "Muhammad Rizky Asyari";
     public static String PHONE = "082386914928";
     public static String EMAIL = "rizkyasyari7@gmail.com";
@@ -78,11 +82,17 @@ public class DataCostumer {
 
     public static CustomerDetails customerDetails(){
 
-        CustomerDetails cd = new CustomerDetails();
-        cd.setFirstName(NAME);
-        cd.setPhone(PHONE);
-        cd.setEmail(EMAIL);
-        return cd;
+        CustomerDetails customerDetails = new CustomerDetails();
+        customerDetails.setFirstName(NAME);
+        customerDetails.setPhone(PHONE);
+        customerDetails.setEmail(EMAIL);
+
+        ShippingAddress shippingAddress = new ShippingAddress();
+        shippingAddress.setAddress(ADDRESS);
+        customerDetails.setShippingAddress(shippingAddress);
+
+        return customerDetails;
+
     }
 
     public static TransactionRequest transactionRequest(String id, int price, int qty, String name,int position){
@@ -90,20 +100,22 @@ public class DataCostumer {
         int harga = getListProduct().get(position).getPrice();
         int kuantiti = getListProduct().get(position).getQty();
         int total = harga*kuantiti;
-        TransactionRequest request = new TransactionRequest(System.currentTimeMillis()+" ", total);
-            request.setCustomerDetails(customerDetails());
+        TransactionRequest transactionRequest = new TransactionRequest(System.currentTimeMillis()+" ", total);
+
+        transactionRequest.setCustomerDetails(customerDetails());
+
             ItemDetails details = new ItemDetails(id, price, qty, name);
 
             ArrayList<ItemDetails> itemDetails = new ArrayList<>();
             itemDetails.add(details);
-            request.setItemDetails(itemDetails);
+            transactionRequest.setItemDetails(itemDetails);
 
             CreditCard creditCard = new CreditCard();
             creditCard.setSaveCard(false);
             creditCard.setAuthentication(CreditCard.AUTHENTICATION_TYPE_RBA);
             creditCard.setBank(BankType.BCA);
-            request.setCreditCard(creditCard);
-            return request;
+            transactionRequest.setCreditCard(creditCard);
+            return transactionRequest;
         }
 
     }

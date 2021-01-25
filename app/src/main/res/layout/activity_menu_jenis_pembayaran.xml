@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,25 +10,39 @@
     android:layout_marginLeft="40dp"
     android:layout_marginRight="40dp"
     android:gravity="center">
-    <Button
-        android:id="@+id/btn_rutin"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pembayaran Rutin"
-        android:fontFamily="sans-serif"
-        android:textSize="18sp"
-        android:textColor="#fff"
-        android:background="@color/colorLightBlue8"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_rutin"
-        android:text="Sekali Bayar"
-        android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif"
-        android:textSize="18sp"
-        android:textColor="#fff"
-        android:background="@color/colorLightBlue8"/>
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center">
 
+        <Button
+            android:id="@+id/btn_rutin"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:background="@color/colorLightBlue8"
+            android:fontFamily="sans-serif"
+            android:text="Pembayaran Rutin"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            />
 
-</RelativeLayout>
+        <Button
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_below="@+id/btn_rutin"
+            android:background="@color/colorLightBlue8"
+            android:fontFamily="sans-serif"
+            android:text="Sekali Bayar"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_rutin"
+            tools:layout_editor_absoluteX="0dp"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

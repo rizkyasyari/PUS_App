@@ -11,6 +11,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_pus_app"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme"
         tools:replace="android:allowBackup">
         <activity android:name=".DaftarActivity"></activity>
@@ -20,7 +21,6 @@
         <activity android:name=".MenuJenisPembayaranActivity" />
         <activity android:name=".OtpActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Transaction.AccountActivity" />
         <activity android:name=".Transaction.ProductDetailActivity" />
         <activity android:name=".Transaction.ProductOrderActivity" />
         <activity android:name=".Transaction.ProductListActivity" />

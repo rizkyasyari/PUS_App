@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.spusapp.R;
 import com.squareup.picasso.Picasso;
 
-public class ProductDetailActivity extends AppCompatActivity {
+public class    ProductDetailActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     @Override
