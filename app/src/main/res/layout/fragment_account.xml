@@ -64,7 +64,7 @@
                     android:src="@drawable/ic_avatar" />
 
                 <TextView
-                    android:id="@+id/tv_name"
+                    android:id="@+id/tv_nama_ortu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -147,7 +147,7 @@
                         android:src="@drawable/ic_mail" />
 
                     <TextView
-                        android:id="@+id/tv_email"
+                        android:id="@+id/tv_email_ortu"
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
                         android:layout_below="@id/text_account_details"
@@ -167,7 +167,7 @@
                         android:src="@drawable/ic_phone" />
 
                     <TextView
-                        android:id="@+id/tv_phone"
+                        android:id="@+id/tv_no_hp_ortu"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_below="@id/image_account_email"
@@ -204,7 +204,7 @@
                         android:src="@drawable/ic_place" />
 
                     <TextView
-                        android:id="@+id/tv_address"
+                        android:id="@+id/tv_alamat_ortu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/text_delivery_address"
@@ -236,73 +236,85 @@
                         android:id="@+id/text_akunanak"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
                         android:text="Data Anak"
                         android:textStyle="bold" />
 
-                    <ImageView
-                        android:id="@+id/image_account1"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_below="@id/text_akunanak"
-                        android:alpha="0.4"
-                        android:src="@drawable/ic_account" />
-
-                    <TextView
-                        android:id="@+id/tv_anak1"
-                        android:layout_width="wrap_content"
+                    <ListView
+                        android:id="@+id/lv_anak"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/text_akunanak"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_toEndOf="@id/image_account1"
-                        android:layout_toRightOf="@id/image_account1"
-                        android:text="Septian David Maulana" />
+                        android:layout_below="@+id/text_akunanak">
 
-                    <ImageView
-                        android:id="@+id/image_account2"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_below="@id/image_account1"
-                        android:alpha="0.4"
-                        android:src="@drawable/ic_account" />
+                    </ListView>
 
-                    <TextView
-                        android:id="@+id/tv_anak2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/tv_anak1"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_toEndOf="@id/image_account2"
-                        android:layout_toRightOf="@id/image_account2"
-                        android:text="Septian Aji" />
+<!--                    <ImageView-->
+<!--                        android:id="@+id/image_account1"-->
+<!--                        android:layout_width="25dp"-->
+<!--                        android:layout_height="25dp"-->
+<!--                        android:layout_below="@id/text_akunanak"-->
+<!--                        android:alpha="0.4"-->
+<!--                        android:src="@drawable/ic_account" />-->
 
-                    <ImageView
-                        android:id="@+id/image_account3"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_below="@id/image_account2"
-                        android:alpha="0.4"
-                        android:src="@drawable/ic_account" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_anak1"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@id/text_akunanak"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_marginLeft="16dp"-->
+<!--                        android:layout_toEndOf="@id/image_account1"-->
+<!--                        android:layout_toRightOf="@id/image_account1"-->
+<!--                        android:text="Septian David Maulana" />-->
 
-                    <TextView
-                        android:id="@+id/tv_anak3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/tv_anak2"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_toEndOf="@id/image_account3"
-                        android:layout_toRightOf="@id/image_account3"
-                        android:text="Surya Darma Ali" />
+<!--                    <ImageView-->
+<!--                        android:id="@+id/image_account2"-->
+<!--                        android:layout_width="25dp"-->
+<!--                        android:layout_height="25dp"-->
+<!--                        android:layout_below="@id/image_account1"-->
+<!--                        android:alpha="0.4"-->
+<!--                        android:src="@drawable/ic_account" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_anak2"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@id/tv_anak1"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_marginLeft="16dp"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:layout_toEndOf="@id/image_account2"-->
+<!--                        android:layout_toRightOf="@id/image_account2"-->
+<!--                        android:text="Septian Aji" />-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/image_account3"-->
+<!--                        android:layout_width="25dp"-->
+<!--                        android:layout_height="25dp"-->
+<!--                        android:layout_below="@id/image_account2"-->
+<!--                        android:alpha="0.4"-->
+<!--                        android:src="@drawable/ic_account" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_anak3"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@id/tv_anak2"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_marginLeft="16dp"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:layout_toEndOf="@id/image_account3"-->
+<!--                        android:layout_toRightOf="@id/image_account3"-->
+<!--                        android:text="Surya Darma Ali" />-->
 
                 </RelativeLayout>
-
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_logout"
+                    android:text="Logout"
+                    />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

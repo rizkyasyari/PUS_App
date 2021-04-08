@@ -60,7 +60,7 @@
             android:drawableLeft="@drawable/ic_mail"
             android:drawablePadding="8dp"
             android:gravity="center_vertical"
-            android:hint="E-mail Sekolaoh"
+            android:hint="E-mail Sekolah"
             android:inputType="textEmailAddress"
             android:padding="10dp"
             android:singleLine="true"

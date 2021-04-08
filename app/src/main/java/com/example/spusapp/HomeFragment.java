@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -16,18 +17,20 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class HomeFragment extends Fragment {
 
-    CardView btn_account,btn_histori,btn_tutorial,btn_chat;
-    ImageView image_notif;
+    CardView btn_account,btn_histori,btn_tutorial,btn_chat,btn_pay;
+    ImageView image_notif,image_pay;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        Button bayar = (Button)view.findViewById(R.id.btn_pay);
+        btn_pay = (CardView) view.findViewById(R.id.btn_pay);
         btn_account = (CardView)view.findViewById(R.id.btn_account);
         btn_histori = (CardView)view.findViewById(R.id.btn_histori);
         btn_chat = (CardView)view.findViewById(R.id.btn_chat);
         btn_tutorial = (CardView)view.findViewById(R.id.btn_tutorial);
+        image_pay = (ImageView) view.findViewById(R.id.bg_pay);
+        image_pay.setAlpha(127); //value: [0-255]. Where 0 is fully transparent and 255 is fully opaque.
 
         btn_tutorial.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +68,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        bayar.setOnClickListener(new View.OnClickListener() {
+        btn_pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 PaymentFragment paymentFragment = new PaymentFragment();
