@@ -45,7 +45,7 @@ public class PaymentFragment extends Fragment {
         btn_rutin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent btn_rutin = new Intent(getActivity(),ProductListActivity.class);
+                Intent btn_rutin = new Intent(getActivity(),RutinListActivity.class);
                 startActivity(btn_rutin);
             }
         });
