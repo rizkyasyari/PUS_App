@@ -2,6 +2,7 @@ package com.example.spusapp.Transaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,22 +14,32 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.spusapp.Adapter.TagihanRutinAdapter;
+import com.example.spusapp.Model.ResponseTagihan;
+import com.example.spusapp.Network.ApiService;
+import com.example.spusapp.Network.CombineApi;
 import com.example.spusapp.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class ProductListActivity extends AppCompatActivity {
+    ApiService apiService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_list);
+        apiService = CombineApi.getApiService();
 
-        init();
+        init(getIntent().getStringExtra("idSiswa"));
     }
 
-    private void init() {
+    private void init(String idSiswa) {
 //        findViewById(R.id.image_setting_account).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -36,13 +47,27 @@ public class ProductListActivity extends AppCompatActivity {
 //            }
 //        });
 
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        recyclerView.setHasFixedSize(true);
+        apiService.getTagihan(idSiswa,"Belum").enqueue(new Callback<List<ResponseTagihan>>() {
+            @Override
+            public void onResponse(Call<List<ResponseTagihan>> call, Response<List<ResponseTagihan>> response) {
+                if (response.isSuccessful()){
+                    List<ResponseTagihan> responseTagihanList = response.body();
+                    RecyclerView recyclerView = findViewById(R.id.recycler_view);
+                    recyclerView.setLayoutManager(new GridLayoutManager(ProductListActivity.this, 2));
+                    recyclerView.setHasFixedSize(true);
 
-        AdapterProduct adapterProduct = new AdapterProduct(DataCustumer.getListProduct());
+                    TagihanRutinAdapter tagihanRutinAdapter = new TagihanRutinAdapter(responseTagihanList);
 
-        recyclerView.setAdapter(adapterProduct);
+                    recyclerView.setAdapter(tagihanRutinAdapter);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<ResponseTagihan>> call, Throwable t) {
+                Log.d("Error", "onFailure: "+t.toString());
+            }
+        });
+
     }
     class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ProductViewHolder>{
 

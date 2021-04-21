@@ -2,6 +2,8 @@ package com.example.spusapp.Transaction;
 
 import android.util.Log;
 
+import com.example.spusapp.Network.ApiService;
+import com.example.spusapp.Utils.SessionManager;
 import com.midtrans.sdk.corekit.core.TransactionRequest;
 import com.midtrans.sdk.corekit.models.BankType;
 import com.midtrans.sdk.corekit.models.BillingAddress;
@@ -10,7 +12,9 @@ import com.midtrans.sdk.corekit.models.ItemDetails;
 import com.midtrans.sdk.corekit.models.ShippingAddress;
 import com.midtrans.sdk.corekit.models.snap.CreditCard;
 
+import java.lang.ref.PhantomReference;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class DataCustumer {
@@ -97,8 +101,8 @@ public class DataCustumer {
 
     public static TransactionRequest transactionRequest(String id, int price, int qty, String name,int position){
 
-        int harga = getListProduct().get(position).getPrice();
-        int kuantiti = getListProduct().get(position).getQty();
+        int harga = price;
+        int kuantiti = qty;
         int total = harga*kuantiti;
         TransactionRequest transactionRequest = new TransactionRequest(System.currentTimeMillis()+" ", total);
 

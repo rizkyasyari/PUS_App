@@ -49,12 +49,15 @@ public class AnakRutinAdapter extends RecyclerView.Adapter<AnakRutinAdapter.View
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewAdapter holder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewAdapter holder, final int position) {
         holder.tvNamaAnak.setText(responseAnakList.get(position).getNama_siswa());
         holder.llAnak.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("id",responseAnakList.get(position).getId_siswa());
+                Intent intent = new Intent(holder.itemView.getContext(), ProductListActivity.class);
+                intent.putExtra("idSiswa", responseAnakList.get(position).getId_siswa());
+                holder.itemView.getContext().startActivity(intent);
             }
         });
     }
