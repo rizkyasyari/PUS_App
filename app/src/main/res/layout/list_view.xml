@@ -14,6 +14,7 @@
         android:layout_marginBottom="3dp"
         android:layout_marginRight="10dp">
     <ImageView
+        android:src="@drawable/ic_avatar"
         android:id="@+id/iv_satu"
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -40,13 +41,35 @@
         android:layout_marginLeft="8dp" />
 
         <TextView
+            android:id="@+id/tv_nama_siswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi"
+            android:layout_toRightOf="@id/iv_satu"
+            android:textSize="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/tv_deskripsi"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tv_total_pay"
-            android:layout_below="@id/tv_deskripsi"
+            android:layout_below="@id/tv_nama_siswa"
             android:text="Rp 2.000.000"
             android:layout_toRightOf="@id/iv_satu"
             android:textSize="15sp"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:id="@+id/tv_status_bayar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi"
+            android:layout_toRightOf="@id/iv_satu"
+            android:textSize="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/tv_total_pay"
             android:layout_marginLeft="8dp" />
 
     </RelativeLayout>

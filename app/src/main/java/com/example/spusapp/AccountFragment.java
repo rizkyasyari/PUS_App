@@ -93,7 +93,9 @@ public class AccountFragment extends Fragment {
                 Log.d("responseanak",response.body().toString());
                 if (response.isSuccessful()){
                     List<ResponseAnak> responseAnakList = response.body();
-                    lvAnak.setAdapter(new AnakAdapter(getActivity(),R.layout.list_anak,responseAnakList));
+                    if (lvAnak != null){
+                        lvAnak.setAdapter(new AnakAdapter(getActivity(),R.layout.list_anak,responseAnakList));
+                    }
                 }
             }
 

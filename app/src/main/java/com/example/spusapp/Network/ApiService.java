@@ -1,6 +1,7 @@
 package com.example.spusapp.Network;
 
 import com.example.spusapp.Model.ResponseAnak;
+import com.example.spusapp.Model.ResponseRiwayat;
 import com.example.spusapp.Model.ResponseTagihan;
 import com.example.spusapp.Model.ResponseUpdate;
 import com.example.spusapp.Model.ResponseUser;
@@ -40,5 +41,11 @@ public interface ApiService {
             @Field("status_bayar") String status_bayar,
             @Field("tanggal_bayar") String tanggal_bayar,
             @Field("order_id") String order_id
+    );
+
+    @FormUrlEncoded
+    @POST("riwayat-tagihan")
+    Call<List<ResponseRiwayat>> riwayatTagihan(
+            @Field("id_orangtua") String id_orangtua
     );
 }
