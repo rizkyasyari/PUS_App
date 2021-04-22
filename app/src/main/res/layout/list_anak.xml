@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="20dp"
     >
 
     <LinearLayout
@@ -10,24 +11,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@color/colorLightBlue2"
+        android:layout_marginBottom="8dp"
         >
 
         <ImageView
             android:id="@+id/image"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:src="@drawable/ic_account"
             />
 
         <TextView
-            android:text="Rizku"
+            android:text="Anak"
             android:id="@+id/tv_nama_anak"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="#003366"/>
+            android:textColor="#003366"
+            android:textSize="30sp"/>
 
     </LinearLayout>
 

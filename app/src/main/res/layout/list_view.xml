@@ -3,22 +3,24 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
+    android:layout_margin="20dp"
     android:background="@drawable/shadow_list">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="3dp"
-        android:layout_marginRight="10dp">
-    <ImageView
-        android:src="@drawable/ic_avatar"
-        android:id="@+id/iv_satu"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center_vertical"/>
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:outlineAmbientShadowColor="@color/colorLightBlue5">
+
+        <ImageView
+            android:id="@+id/iv_satu"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_history2" />
 
         <TextView
             android:id="@+id/tv_satu"
@@ -53,13 +55,16 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:id="@+id/tv_total_pay"
-            android:layout_below="@id/tv_nama_siswa"
             android:text="Rp 2.000.000"
-            android:layout_toRightOf="@id/iv_satu"
+            android:layout_toRightOf="@id/tv_satu"
             android:textSize="15sp"
-            android:layout_marginLeft="8dp" />
+            android:textStyle="bold"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical|right"
+
+            android:layout_centerVertical="true"/>
 
         <TextView
             android:id="@+id/tv_status_bayar"
@@ -69,7 +74,7 @@
             android:layout_toRightOf="@id/iv_satu"
             android:textSize="12dp"
             android:layout_marginTop="5dp"
-            android:layout_below="@id/tv_total_pay"
+            android:layout_below="@id/tv_satu"
             android:layout_marginLeft="8dp" />
 
     </RelativeLayout>

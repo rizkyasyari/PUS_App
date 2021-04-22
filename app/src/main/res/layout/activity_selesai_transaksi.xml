@@ -6,24 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".SelesaiTransaksiActivity">
 
-    <TextView
-        android:id="@+id/textView3"
+    <LinearLayout
+        android:id="@+id/ll_1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200px"
-        android:gravity="center"
-        android:text="Transaksi Berhasil"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_gradient"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_satu"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_withdraw"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"/>
 
-    <Button
-        android:id="@+id/btn_selesai_beranda"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_tagihan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kembali ke beranda"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:clickable="false"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:outlineAmbientShadowColor="@color/colorLightBlue5"
+        android:outlineSpotShadowColor="@color/colorLightBlue5"
+        app:layout_constraintTop_toBottomOf="@+id/iv_satu"
+        android:layout_margin="25dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="ra">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="Transaksi Berhasil !"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Transaksi Diproses Menggunakan PUS App"
+                android:textSize="10sp"
+                android:gravity="center"
+               android:layout_below="@+id/textView3"/>
+
+            <Button
+                android:id="@+id/btn_selesai_beranda"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="Kembali Ke Beranda"
+                android:textColor="@color/white"
+                android:layout_below="@+id/textView4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
