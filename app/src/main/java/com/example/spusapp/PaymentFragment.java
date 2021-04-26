@@ -50,6 +50,14 @@ public class PaymentFragment extends Fragment {
             }
         });
 
+        btn_sekali.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),SekaliListActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
         }
     }

@@ -22,11 +22,11 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class AnakRutinAdapter extends RecyclerView.Adapter<AnakRutinAdapter.ViewAdapter>{
+public class AnakSekaliAdapter extends RecyclerView.Adapter<AnakSekaliAdapter.ViewAdapter>{
 
     private List<ResponseAnak> responseAnakList;
 
-    public AnakRutinAdapter(List<ResponseAnak> responseAnakList) {
+    public AnakSekaliAdapter(List<ResponseAnak> responseAnakList) {
         this.responseAnakList = responseAnakList;
     }
 
@@ -57,7 +57,7 @@ public class AnakRutinAdapter extends RecyclerView.Adapter<AnakRutinAdapter.View
                 Log.d("id",responseAnakList.get(position).getId_siswa());
                 Intent intent = new Intent(holder.itemView.getContext(), ProductListActivity.class);
                 intent.putExtra("idSiswa", responseAnakList.get(position).getId_siswa());
-                intent.putExtra("jenisBayar", "Rutin");
+                intent.putExtra("jenisBayar", "Sekali Bayar");
                 holder.itemView.getContext().startActivity(intent);
             }
         });

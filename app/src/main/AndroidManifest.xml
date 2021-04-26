@@ -12,7 +12,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:allowBackup">
-        <activity android:name=".SelesaiTransaksiActivity"></activity>
+        <activity android:name=".SekaliListActivity"></activity>
+        <activity android:name=".SelesaiTransaksiActivity" />
         <activity android:name=".RutinListActivity" />
         <activity android:name=".Login" />
         <activity android:name=".DaftarActivity" />

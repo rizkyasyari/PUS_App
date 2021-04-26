@@ -31,7 +31,8 @@ public interface ApiService {
     @POST("get-tagihan")
     Call<List<ResponseTagihan>> getTagihan(
             @Field("id_siswa") String id_siswa,
-            @Field("status_bayar") String status_bayar
+            @Field("status_bayar") String status_bayar,
+            @Field("jenis_pembayaran") String jenis_pembayaran
     );
 
     @FormUrlEncoded

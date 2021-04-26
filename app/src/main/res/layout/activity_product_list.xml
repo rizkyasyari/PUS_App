@@ -48,13 +48,14 @@
 <!--                    android:src="@drawable/ic_kiostr"-->
 <!--                    android:textSize="25sp" />-->
                 <TextView
+                    android:id="@+id/tv_product_list"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:gravity="center"
                     android:scaleType="center"
-                    android:text="Pembayaran Rutin"
+                    android:text="Pembayaran"
                     android:textSize="20sp"
                     android:background="@color/colorLightBlue8"
                     android:textColor="@color/white"/>

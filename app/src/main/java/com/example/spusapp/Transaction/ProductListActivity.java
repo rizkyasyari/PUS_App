@@ -19,10 +19,14 @@ import com.example.spusapp.Model.ResponseTagihan;
 import com.example.spusapp.Network.ApiService;
 import com.example.spusapp.Network.CombineApi;
 import com.example.spusapp.R;
+import com.example.spusapp.Utils.SessionManager;
 import com.squareup.picasso.Picasso;
 
+import java.util.HashMap;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -30,16 +34,22 @@ import retrofit2.Response;
 public class ProductListActivity extends AppCompatActivity {
     ApiService apiService;
 
+    @BindView(R.id.tv_product_list)
+    TextView tvProductList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_list);
         apiService = CombineApi.getApiService();
+        ButterKnife.bind(this);
 
-        init(getIntent().getStringExtra("idSiswa"));
+        tvProductList.setText("Pembayaran "+getIntent().getStringExtra("jenisBayar"));
+
+        init(getIntent().getStringExtra("idSiswa"),getIntent().getStringExtra("jenisBayar"));
     }
 
-    private void init(String idSiswa) {
+    private void init(String idSiswa,String jenisBayar) {
 //        findViewById(R.id.image_setting_account).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -47,7 +57,7 @@ public class ProductListActivity extends AppCompatActivity {
 //            }
 //        });
 
-        apiService.getTagihan(idSiswa,"Belum").enqueue(new Callback<List<ResponseTagihan>>() {
+        apiService.getTagihan(idSiswa,"Belum",jenisBayar).enqueue(new Callback<List<ResponseTagihan>>() {
             @Override
             public void onResponse(Call<List<ResponseTagihan>> call, Response<List<ResponseTagihan>> response) {
                 if (response.isSuccessful()){
