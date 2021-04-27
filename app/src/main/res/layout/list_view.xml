@@ -29,22 +29,23 @@
             android:layout_marginLeft="8dp"
             android:layout_toRightOf="@id/iv_satu"
             android:text="Judul"
-            android:textSize="18dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
             />
     <TextView
         android:id="@+id/tv_deskripsi"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Deskripsi"
-        android:layout_toRightOf="@id/iv_satu"
         android:textSize="12dp"
+        android:layout_toRightOf="@+id/iv_satu"
         android:layout_marginTop="5dp"
         android:layout_below="@id/tv_satu"
         android:layout_marginLeft="8dp" />
 
         <TextView
             android:id="@+id/tv_nama_siswa"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Deskripsi"
             android:layout_toRightOf="@id/iv_satu"
@@ -54,27 +55,40 @@
             android:layout_marginLeft="8dp" />
 
         <TextView
+            android:id="@+id/tv_rp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Rp. "
+            android:layout_toRightOf="@id/tv_deskripsi"
+            android:gravity="center_vertical|right"
+            android:textSize="15sp"
+            android:layout_marginLeft="8dp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            />
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:id="@+id/tv_total_pay"
             android:text="Rp 2.000.000"
-            android:layout_toRightOf="@id/tv_satu"
+            android:layout_toRightOf="@id/tv_rp"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:layout_marginLeft="8dp"
-            android:gravity="center_vertical|right"
-
+            android:gravity="center_vertical"
             android:layout_centerVertical="true"/>
+
 
         <TextView
             android:id="@+id/tv_status_bayar"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Deskripsi"
             android:layout_toRightOf="@id/iv_satu"
-            android:textSize="12dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorLightBlue6"
             android:layout_marginTop="5dp"
-            android:layout_below="@id/tv_satu"
+            android:layout_below="@id/tv_nama_siswa"
             android:layout_marginLeft="8dp" />
 
     </RelativeLayout>

@@ -52,7 +52,7 @@ public class SekaliListActivity extends AppCompatActivity {
                 Log.d("responseanak",response.body().toString());
                 if (response.isSuccessful()){
                     List<ResponseAnak> responseAnakList = response.body();
-                    rvAnakSekali.setLayoutManager(new GridLayoutManager(SekaliListActivity.this,2));
+                    rvAnakSekali.setLayoutManager(new GridLayoutManager(SekaliListActivity.this,1));
                     rvAnakSekali.setHasFixedSize(true);
 
                     AnakSekaliAdapter anakSekaliAdapter = new AnakSekaliAdapter(responseAnakList);

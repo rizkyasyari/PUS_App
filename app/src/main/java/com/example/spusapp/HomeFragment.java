@@ -24,7 +24,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        btn_pay = (CardView) view.findViewById(R.id.btn_pay);
+//        btn_pay = (CardView) view.findViewById(R.id.btn_pay);
         btn_account = (CardView)view.findViewById(R.id.btn_account);
         btn_histori = (CardView)view.findViewById(R.id.btn_histori);
         btn_chat = (CardView)view.findViewById(R.id.btn_chat);
@@ -40,13 +40,13 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        btn_chat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent btn_chat = new Intent(getActivity(),ChatActivity.class);
-                startActivity(btn_chat);
-            }
-        });
+//        btn_chat.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent btn_chat = new Intent(getActivity(),ChatActivity.class);
+//                startActivity(btn_chat);
+//            }
+//        });
 
         btn_histori.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +68,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        btn_pay.setOnClickListener(new View.OnClickListener() {
+        btn_chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 PaymentFragment paymentFragment = new PaymentFragment();

@@ -56,7 +56,7 @@ public class RutinListActivity extends AppCompatActivity {
                 Log.d("responseanak",response.body().toString());
                 if (response.isSuccessful()){
                     List<ResponseAnak> responseAnakList = response.body();
-                    rvAnakRutin.setLayoutManager(new GridLayoutManager(RutinListActivity.this,2));
+                    rvAnakRutin.setLayoutManager(new GridLayoutManager(RutinListActivity.this,1));
                     rvAnakRutin.setHasFixedSize(true);
 
                     AnakRutinAdapter anakRutinAdapter = new AnakRutinAdapter(responseAnakList);
