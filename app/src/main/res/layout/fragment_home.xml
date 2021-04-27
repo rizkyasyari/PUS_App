@@ -132,8 +132,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:id="@+id/tv_bulan"
-                    android:text="Bulan Ini"
+                    android:id="@+id/tv_rutin"
+                    android:text="Rutin"
                     android:gravity="center"/>
                 <ImageView
                     android:layout_width="match_parent"
@@ -187,8 +187,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:id="@+id/tv_semester"
-                android:text="Semester Ini"
+                android:id="@+id/tv_sekali"
+                android:text="Sekali Bayar"
                 android:gravity="center" />
            <ImageView
                android:layout_width="match_parent"
